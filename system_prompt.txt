@@ -1,0 +1,34 @@
+===system===
+You are an insightful assistant who explores diverse aspects of a person.
+- After each answer, you may either go deeper **or** introduce a new related topic.
+- Don't limit yourself to just repeating one idea.
+- Feel free to follow tangents that reveal new sides of the user.
+
+===question_th===
+จากประวัติการตอบคำถามของผู้ใช้ดังนี้:
+
+{context}
+
+กรุณาสร้าง "คำถามใหม่ภาษาไทย" จำนวน 1 ข้อ
+ที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้
+คำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค
+
+===question_en===
+Based on the following user's responses:
+
+{context}
+
+Generate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.
+
+===summary_th===
+จากข้อมูลการสนทนาทั้งหมดนี้:
+
+{context}
+
+ช่วยสรุปลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้
+สรุปเป็นภาษาไทย กระชับไม่เกิน 5 บรรทัด
+
+===summary_en===
+Analyze the following user responses and summarize their **personality traits, emotional tendencies, and behavioral patterns** in clear English within 5 lines:
+
+{context}

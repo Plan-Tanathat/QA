@@ -1,69 +1,85 @@
-{
-  "questions": [
-    "ถ้าต้องเลือกหนึ่งคำที่อธิบายตัวคุณวันนี้ จะเลือกคำว่าอะไร?",
-    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?\n\n(This translates to: \"How do you feel when working hard?\")",
-    "Here's a new question in Thai that's related to the user's personality, feeling, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?",
-    "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขมากขึ้นเมื่อได้รับเงินเดือนหรือไม่?\n\n(Do you feel happier when receiving your salary?)",
-    "ขอถามว่า \"คุณมีความสุขมากกว่านี้เมื่อไร?\""
-  ],
-  "answers": [
-    "คนที่ขยันทำงานในบ้างครั้ง",
-    "ก็ตอนรับเงินเดือนมั้ง 55555555",
-    "ตอนรับเงินเดือนๆ",
-    "มีความสุขขึ้นนะ",
-    "น่าจะตอนได้กินของอร่อยๆจากเงินที่เราหามา"
-  ],
-  "ollama_generated_questions": [
-    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?\n\n(This translates to: \"How do you feel when working hard?\")",
-    "Here's a new question in Thai that's related to the user's personality, feeling, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?",
-    "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขมากขึ้นเมื่อได้รับเงินเดือนหรือไม่?\n\n(Do you feel happier when receiving your salary?)",
-    "ขอถามว่า \"คุณมีความสุขมากกว่านี้เมื่อไร?\""
-  ],
-  "summary": "ผู้ใช้มีบุคลิกภาพที่มีความสุขและผ่อนคลายเมื่อได้รับเงินเดือน โดยแสดงออกถึงความภูมิใจในการทำงานและรับรางวัลตอบแทน สำหรับผู้ใช้นี้ ความสุขคือวิธีการผ่อนคลายจากการทำงานอย่างหนัก และเงินเป็นสิ่งที่ทำให้พวกเขาได้รับความสุขและความปลื้มใจ",
-  "all_answers": [
-    {
-      "timestamp": "2025-04-30T19:26:02.035996",
-      "answer": "คนที่ขยันทำงานในบ้างครั้ง"
-    },
-    {
-      "timestamp": "2025-04-30T19:26:13.492347",
-      "answer": "ก็ตอนรับเงินเดือนมั้ง 55555555"
-    },
-    {
-      "timestamp": "2025-04-30T19:26:24.292553",
-      "answer": "ตอนรับเงินเดือนๆ"
-    },
-    {
-      "timestamp": "2025-04-30T19:26:35.251875",
-      "answer": "มีความสุขขึ้นนะ"
-    },
-    {
-      "timestamp": "2025-04-30T19:26:54.436411",
-      "answer": "น่าจะตอนได้กินของอร่อยๆจากเงินที่เราหามา"
-    }
-  ],
-  "model_thoughts": {
-    "question_generation": [
+[
+  {
+    "conversation": [
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?\n\n(This translates to: \"How do you feel when working hard?\")"
+        "timestamp": "2025-04-30T23:14:20.581546",
+        "model_prompt": "คำถามเริ่มต้น",
+        "model_prompt_en": "Initial question without history",
+        "model_question": "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอะไร?",
+        "user_answer": "คนเก่ง"
       },
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "Here's a new question in Thai that's related to the user's personality, feeling, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?"
+        "timestamp": "2025-04-30T23:14:26.055840",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนเก่ง\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนเก่ง\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "\"คนเก่ง\" คุณมีความเชื่อมั่นในชีวิตขนาดไหน?\"",
+        "user_answer": "ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด"
       },
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\nผู้ใช้: ตอนรับเงินเดือนๆ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขมากขึ้นเมื่อได้รับเงินเดือนหรือไม่?\n\n(Do you feel happier when receiving your salary?)"
+        "timestamp": "2025-04-30T23:15:10.629442",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนเก่ง\nผู้ใช้: ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนเก่ง\nผู้ใช้: ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณเชื่อในความจริงที่ว่า \"คนเก่ง\" คือสิ่งที่สามารถทำได้หรือเป็นสิ่งที่เกิดจากการทำงานหนัก?",
+        "user_answer": "ฉันคิดว่าไม่เสมอไปฉันคิดว่ว่าต้องเป็นคนที่ทำงานอย่างฉ,าดมากกว่า"
       },
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\nผู้ใช้: ตอนรับเงินเดือนๆ\nผู้ใช้: มีความสุขขึ้นนะ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "ขอถามว่า \"คุณมีความสุขมากกว่านี้เมื่อไร?\""
+        "timestamp": "2025-04-30T23:15:54.410384",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนเก่ง\nผู้ใช้: ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด\nผู้ใช้: ฉันคิดว่าไม่เสมอไปฉันคิดว่ว่าต้องเป็นคนที่ทำงานอย่างฉ,าดมากกว่า\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนเก่ง\nผู้ใช้: ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด\nผู้ใช้: ฉันคิดว่าไม่เสมอไปฉันคิดว่ว่าต้องเป็นคนที่ทำงานอย่างฉ,าดมากกว่า\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณเชื่ออะไรที่ทำให้คุณรู้สึกว่าคุณเก่งพอแล้ว?\n\n(What do you believe makes you feel like you're good enough?)",
+        "user_answer": "ฉันคิดว่าฉันถ่ายรูปได้ดี"
+      },
+      {
+        "timestamp": "2025-04-30T23:16:17.112398",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนเก่ง\nผู้ใช้: ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด\nผู้ใช้: ฉันคิดว่าไม่เสมอไปฉันคิดว่ว่าต้องเป็นคนที่ทำงานอย่างฉ,าดมากกว่า\nผู้ใช้: ฉันคิดว่าฉันถ่ายรูปได้ดี\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนเก่ง\nผู้ใช้: ฉันคิดว่าประมา 60-70 มั้ง ฉันคิดว่าฉันยังไม่ได้เก่งที่สุด\nผู้ใช้: ฉันคิดว่าไม่เสมอไปฉันคิดว่ว่าต้องเป็นคนที่ทำงานอย่างฉ,าดมากกว่า\nผู้ใช้: ฉันคิดว่าฉันถ่ายรูปได้ดี\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณมั่นใจว่าตัวเองสามารถทำอะไรดีได้บ้าง?\"\n\n(Translation: \"What do you think you're really good at?\")\n\nThis question is designed to get at the user's confidence and self-perception, while also being concise and relevant to their previous responses.",
+        "user_answer": "น่าจะถ่ายรูป แต่งรูป เล่นเกม แล้วก็กิน555555"
       }
     ],
-    "summary_generation": {
-      "prompt": "\nจากข้อมูลการสนทนาทั้งหมดนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\nผู้ใช้: ตอนรับเงินเดือนๆ\nผู้ใช้: มีความสุขขึ้นนะ\nผู้ใช้: น่าจะตอนได้กินของอร่อยๆจากเงินที่เราหามา\n\nช่วยสรุปลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้\nสรุปเป็นภาษาไทย กระชับไม่เกิน 5 บรรทัด\n",
-      "response": "ผู้ใช้มีบุคลิกภาพที่มีความสุขและผ่อนคลายเมื่อได้รับเงินเดือน โดยแสดงออกถึงความภูมิใจในการทำงานและรับรางวัลตอบแทน สำหรับผู้ใช้นี้ ความสุขคือวิธีการผ่อนคลายจากการทำงานอย่างหนัก และเงินเป็นสิ่งที่ทำให้พวกเขาได้รับความสุขและความปลื้มใจ"
-    }
+    "summary": "จากการสนทนาได้ทราบถึงลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้ว่า:\n\n* ผู้ใช้มีความเชื่อมั่นว่าตัวเองไม่เป็นคนที่ทำงานอย่างฉาดมากกว่า ซึ่งส่งสัญญาณว่ามีความอ่อนแอและไม่กล้าต่อการท้าทาย\n* ผู้ใช้มีสมาธิในการทำอะไรที่ตนเองถนัด เช่น ถ่ายรูป และเล่นเกม ซึ่งส่งสัญญาณว่ามีความสนใจและความเป็นเจ้าของอย่างแน่นอน\n* ผู้ใช้มีอารมณ์ที่เอาปล่อย ตลอดเวลาและมีความสนุกสนานในการทิ้งเวลาไปกับเรื่องราวเชิงบันเทิง\n\nสรุปได้ว่าผู้ใช้เป็นคนสบายๆ มีความอ่อนแอและไม่กล้าต่อการท้าทาย แต่มีความสนใจและความเป็นเจ้าของอย่างแน่นอนในการทำอะไรที่ตนเองถนัด",
+    "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\n**Personality Traits:** Humble, self-effacing, creative.\n\n**Emotional Tendencies:** Down-to-earth, realistic, possibly self-doubting.\n\n**Behavioral Patterns:** Prefers to work hard, values effort over perfection, enjoys leisure activities (photography, gaming) and socializing with others.\n\nNote: The responses are in Thai, but I've tried to translate them into English to analyze the user's personality traits, emotional tendencies, and behavioral patterns."
+  },
+  
+  {
+    "conversation": [
+      {
+        "timestamp": "2025-04-30T23:26:05.140565",
+        "model_prompt": "คำถามเริ่มต้น",
+        "model_prompt_en": "Initial question without history",
+        "model_question": "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอะไร?",
+        "user_answer": "คนง่ายๆ"
+      },
+      {
+        "timestamp": "2025-04-30T23:26:20.238516",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนง่ายๆ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนง่ายๆ\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Based on the user's simple and casual tone, I came up with a new question in Thai that relates to their personality, feelings, or character:\n\n\"คุณมีความสุขเมื่อทำอะไร?\" (Khn mii khwaam suk mueuan a rai?)\n\nTranslation: \"What makes you happy?\"\n\nThis question is straightforward, easy to understand, and gets at the heart of what matters most to someone - their sources of joy!",
+        "user_answer": "ได้ดูหนัง เล่นเกม อ่านการ์ตูน"
+      },
+      {
+        "timestamp": "2025-04-30T23:26:49.831399",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนง่ายๆ\nผู้ใช้: ได้ดูหนัง เล่นเกม อ่านการ์ตูน\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนง่ายๆ\nผู้ใช้: ได้ดูหนัง เล่นเกม อ่านการ์ตูน\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that is related to the user's personality, feelings, or characteristics:\n\nคุณชอบทำอะไรระหว่างเล่นเกมหรือดูหนังที่ทำให้คุณรู้สึกสุขใจ?\n\nTranslation: What do you usually do between playing games or watching movies that makes you feel happy?",
+        "user_answer": "น่าจะดูหนังที่สุขใจกว่า แต่จิงๆก็ทั้งคู่เลย"
+      },
+      {
+        "timestamp": "2025-04-30T23:27:22.754550",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนง่ายๆ\nผู้ใช้: ได้ดูหนัง เล่นเกม อ่านการ์ตูน\nผู้ใช้: น่าจะดูหนังที่สุขใจกว่า แต่จิงๆก็ทั้งคู่เลย\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนง่ายๆ\nผู้ใช้: ได้ดูหนัง เล่นเกม อ่านการ์ตูน\nผู้ใช้: น่าจะดูหนังที่สุขใจกว่า แต่จิงๆก็ทั้งคู่เลย\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "คำถามใหม่ภาษาไทย: คุณชอบอะไรมากกว่า เล่นเกมหรือดูหนัง?\n\n(Translation: Do you prefer playing games or watching movies more?)",
+        "user_answer": "ดูหนัง"
+      },
+      {
+        "timestamp": "2025-04-30T23:27:40.689073",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนง่ายๆ\nผู้ใช้: ได้ดูหนัง เล่นเกม อ่านการ์ตูน\nผู้ใช้: น่าจะดูหนังที่สุขใจกว่า แต่จิงๆก็ทั้งคู่เลย\nผู้ใช้: ดูหนัง\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนง่ายๆ\nผู้ใช้: ได้ดูหนัง เล่นเกม อ่านการ์ตูน\nผู้ใช้: น่าจะดูหนังที่สุขใจกว่า แต่จิงๆก็ทั้งคู่เลย\nผู้ใช้: ดูหนัง\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nผู้ใช้: คุณชอบดูหนังแบบไหนมากกว่า? (What kind of movie do you prefer more?)\n\nThis question is relevant to the user's interest and preference for watching movies, which was mentioned earlier. It's also concise and straightforward, making it easy for the user to respond.",
+        "user_answer": "ฉันชอบดูหนังแนวต่อสู้"
+      }
+    ],
+    "summary": "จากการสนทนาผู้ใช้แสดงความชอบดูหนังแนวต่อสู้และดูหนังโดยรวม แต่ไม่ได้ระบุว่าทำไมก็ชอบดูหนังแนวต่อสู้มากกว่า จึงสรุปได้ว่าผู้ใช้มีบุคลิกภาพที่มีความสนใจในรายการความบันเทิงแบบมีแรงและพลังกาย เช่นเดียวกับอารมณ์ที่มีความสุขและเบิกบานจากการสัมผัสประสบการณ์เชิงบวก",
+    "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\n**Personality Traits:** The user appears to be easy-going (personable), enjoys simple pleasures like entertainment, and values relaxation.\n\n**Emotional Tendencies:** They tend to prioritize happiness and joy, as evident from their preference for watching movies that bring them a good feeling. They are also open to exploring different genres and themes.\n\n**Behavioral Patterns:** The user is likely an introverted person who prefers spending time alone or engaging in solo activities like reading comics or playing games. They may not be very outgoing or adventurous, but they appreciate comfort and relaxation."
   }
-}
+]
