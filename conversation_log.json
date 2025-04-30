@@ -1,53 +1,69 @@
 {
   "questions": [
     "ถ้าต้องเลือกหนึ่งคำที่อธิบายตัวคุณวันนี้ จะเลือกคำว่าอะไร?",
-    "Here's a new Thai question that relates to the user's personality, feelings, or character:\n\n\"คุณมีความพยายามในการเรียนรู้อะไรใหม่ๆ อย่างไร?\"\n\nTranslation: \"What do you strive to learn new things about?\"",
-    "ขอเสนอคำถามใหม่ภาษาไทยว่า:\n\n\"คุณเชื่อมั่นว่าตัวเองจะสามารถเป็นอย่างที่คุณฝันไว้ได้หรือ?\"",
-    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณคิดว่าความพยายามของตนเองมีผลกระทบต่อชีวิตทุกวี่อย่างไร?\"\n\n(How do you think your efforts have an impact on your daily life?)",
-    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณจะทำอย่างไรหากได้รับการตำหนิด้วยความจริงใจ?\"\n\n(Translation: \"How would you react if someone scolded you with sincerity?\")\n\nThis question is designed to tap into the user's emotional response and willingness to learn from criticism. It also explores their ability to handle constructive feedback, which may reveal aspects of their personality or character."
+    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?\n\n(This translates to: \"How do you feel when working hard?\")",
+    "Here's a new question in Thai that's related to the user's personality, feeling, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?",
+    "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขมากขึ้นเมื่อได้รับเงินเดือนหรือไม่?\n\n(Do you feel happier when receiving your salary?)",
+    "ขอถามว่า \"คุณมีความสุขมากกว่านี้เมื่อไร?\""
   ],
   "answers": [
-    "คนที่มีความพยายาม",
-    "ฉันแค่รู้สึกว่าอยากให้ตัวเองเก่งขึ้นเรื่อยๆ",
-    "ไม่มั่นใจ แต่ฉันจะพยายาม",
-    "ก็ต่อเมื่อฮฉันหมดความพยายามในการเรียนรู้",
-    "ฉันจะยอมรับฟังแล้วเอาไปปรับปรุง"
+    "คนที่ขยันทำงานในบ้างครั้ง",
+    "ก็ตอนรับเงินเดือนมั้ง 55555555",
+    "ตอนรับเงินเดือนๆ",
+    "มีความสุขขึ้นนะ",
+    "น่าจะตอนได้กินของอร่อยๆจากเงินที่เราหามา"
   ],
   "ollama_generated_questions": [
-    "Here's a new Thai question that relates to the user's personality, feelings, or character:\n\n\"คุณมีความพยายามในการเรียนรู้อะไรใหม่ๆ อย่างไร?\"\n\nTranslation: \"What do you strive to learn new things about?\"",
-    "ขอเสนอคำถามใหม่ภาษาไทยว่า:\n\n\"คุณเชื่อมั่นว่าตัวเองจะสามารถเป็นอย่างที่คุณฝันไว้ได้หรือ?\"",
-    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณคิดว่าความพยายามของตนเองมีผลกระทบต่อชีวิตทุกวี่อย่างไร?\"\n\n(How do you think your efforts have an impact on your daily life?)",
-    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณจะทำอย่างไรหากได้รับการตำหนิด้วยความจริงใจ?\"\n\n(Translation: \"How would you react if someone scolded you with sincerity?\")\n\nThis question is designed to tap into the user's emotional response and willingness to learn from criticism. It also explores their ability to handle constructive feedback, which may reveal aspects of their personality or character."
+    "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?\n\n(This translates to: \"How do you feel when working hard?\")",
+    "Here's a new question in Thai that's related to the user's personality, feeling, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?",
+    "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขมากขึ้นเมื่อได้รับเงินเดือนหรือไม่?\n\n(Do you feel happier when receiving your salary?)",
+    "ขอถามว่า \"คุณมีความสุขมากกว่านี้เมื่อไร?\""
   ],
-  "summary": "สรุปคุณสมบัติของผู้ใช้:\n\n* มีความพยายามและใฝ่ฝันให้ตัวเองเก่งขึ้นเรื่อยๆ\n* ไม่มั่นใจ แต่ยอมรับความจริงและพยายามปรับปรุงตัวเอง\n* พร้อมที่จะยอมรับฟังคำแนะนำและเอาไปปรับปรุง\n* มีความมุ่งมั่นต่อการเรียนรู้และพัฒนาตัวเอง\n\nสรุปได้ว่าผู้ใช้มีใจดีมีความคิดเชิงบวก และพร้อมที่จะทำงานหนักเพื่อพัฒนาแต่自身",
-  
-  
+  "summary": "ผู้ใช้มีบุคลิกภาพที่มีความสุขและผ่อนคลายเมื่อได้รับเงินเดือน โดยแสดงออกถึงความภูมิใจในการทำงานและรับรางวัลตอบแทน สำหรับผู้ใช้นี้ ความสุขคือวิธีการผ่อนคลายจากการทำงานอย่างหนัก และเงินเป็นสิ่งที่ทำให้พวกเขาได้รับความสุขและความปลื้มใจ",
+  "all_answers": [
+    {
+      "timestamp": "2025-04-30T19:26:02.035996",
+      "answer": "คนที่ขยันทำงานในบ้างครั้ง"
+    },
+    {
+      "timestamp": "2025-04-30T19:26:13.492347",
+      "answer": "ก็ตอนรับเงินเดือนมั้ง 55555555"
+    },
+    {
+      "timestamp": "2025-04-30T19:26:24.292553",
+      "answer": "ตอนรับเงินเดือนๆ"
+    },
+    {
+      "timestamp": "2025-04-30T19:26:35.251875",
+      "answer": "มีความสุขขึ้นนะ"
+    },
+    {
+      "timestamp": "2025-04-30T19:26:54.436411",
+      "answer": "น่าจะตอนได้กินของอร่อยๆจากเงินที่เราหามา"
+    }
+  ],
   "model_thoughts": {
     "question_generation": [
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่มีความพยายาม\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "Here's a new Thai question that relates to the user's personality, feelings, or character:\n\n\"คุณมีความพยายามในการเรียนรู้อะไรใหม่ๆ อย่างไร?\"\n\nTranslation: \"What do you strive to learn new things about?\""
+        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
+        "response": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?\n\n(This translates to: \"How do you feel when working hard?\")"
       },
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่มีความพยายาม\nผู้ใช้: ฉันแค่รู้สึกว่าอยากให้ตัวเองเก่งขึ้นเรื่อยๆ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "ขอเสนอคำถามใหม่ภาษาไทยว่า:\n\n\"คุณเชื่อมั่นว่าตัวเองจะสามารถเป็นอย่างที่คุณฝันไว้ได้หรือ?\""
+        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
+        "response": "Here's a new question in Thai that's related to the user's personality, feeling, or character:\n\nคุณมีความสุขจากการทำงานอย่างไร?"
       },
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่มีความพยายาม\nผู้ใช้: ฉันแค่รู้สึกว่าอยากให้ตัวเองเก่งขึ้นเรื่อยๆ\nผู้ใช้: ไม่มั่นใจ แต่ฉันจะพยายาม\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณคิดว่าความพยายามของตนเองมีผลกระทบต่อชีวิตทุกวี่อย่างไร?\"\n\n(How do you think your efforts have an impact on your daily life?)"
+        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\nผู้ใช้: ตอนรับเงินเดือนๆ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
+        "response": "Here is a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความสุขมากขึ้นเมื่อได้รับเงินเดือนหรือไม่?\n\n(Do you feel happier when receiving your salary?)"
       },
       {
-        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่มีความพยายาม\nผู้ใช้: ฉันแค่รู้สึกว่าอยากให้ตัวเองเก่งขึ้นเรื่อยๆ\nผู้ใช้: ไม่มั่นใจ แต่ฉันจะพยายาม\nผู้ใช้: ก็ต่อเมื่อฮฉันหมดความพยายามในการเรียนรู้\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
-        "response": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณจะทำอย่างไรหากได้รับการตำหนิด้วยความจริงใจ?\"\n\n(Translation: \"How would you react if someone scolded you with sincerity?\")\n\nThis question is designed to tap into the user's emotional response and willingness to learn from criticism. It also explores their ability to handle constructive feedback, which may reveal aspects of their personality or character."
+        "prompt": "\nจากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\nผู้ใช้: ตอนรับเงินเดือนๆ\nผู้ใช้: มีความสุขขึ้นนะ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค\n",
+        "response": "ขอถามว่า \"คุณมีความสุขมากกว่านี้เมื่อไร?\""
       }
     ],
     "summary_generation": {
-      "prompt": "\nจากข้อมูลการสนทนาทั้งหมดนี้:\n\n\nผู้ใช้: คนที่มีความพยายาม\nผู้ใช้: ฉันแค่รู้สึกว่าอยากให้ตัวเองเก่งขึ้นเรื่อยๆ\nผู้ใช้: ไม่มั่นใจ แต่ฉันจะพยายาม\nผู้ใช้: ก็ต่อเมื่อฮฉันหมดความพยายามในการเรียนรู้\nผู้ใช้: ฉันจะยอมรับฟังแล้วเอาไปปรับปรุง\n\nช่วยสรุปลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้\nสรุปเป็นภาษาไทย กระชับไม่เกิน 5 บรรทัด\n",
-      "response": "สรุปคุณสมบัติของผู้ใช้:\n\n* มีความพยายามและใฝ่ฝันให้ตัวเองเก่งขึ้นเรื่อยๆ\n* ไม่มั่นใจ แต่ยอมรับความจริงและพยายามปรับปรุงตัวเอง\n* พร้อมที่จะยอมรับฟังคำแนะนำและเอาไปปรับปรุง\n* มีความมุ่งมั่นต่อการเรียนรู้และพัฒนาตัวเอง\n\nสรุปได้ว่าผู้ใช้มีใจดีมีความคิดเชิงบวก และพร้อมที่จะทำงานหนักเพื่อพัฒนาแต่自身"
+      "prompt": "\nจากข้อมูลการสนทนาทั้งหมดนี้:\n\n\nผู้ใช้: คนที่ขยันทำงานในบ้างครั้ง\nผู้ใช้: ก็ตอนรับเงินเดือนมั้ง 55555555\nผู้ใช้: ตอนรับเงินเดือนๆ\nผู้ใช้: มีความสุขขึ้นนะ\nผู้ใช้: น่าจะตอนได้กินของอร่อยๆจากเงินที่เราหามา\n\nช่วยสรุปลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้\nสรุปเป็นภาษาไทย กระชับไม่เกิน 5 บรรทัด\n",
+      "response": "ผู้ใช้มีบุคลิกภาพที่มีความสุขและผ่อนคลายเมื่อได้รับเงินเดือน โดยแสดงออกถึงความภูมิใจในการทำงานและรับรางวัลตอบแทน สำหรับผู้ใช้นี้ ความสุขคือวิธีการผ่อนคลายจากการทำงานอย่างหนัก และเงินเป็นสิ่งที่ทำให้พวกเขาได้รับความสุขและความปลื้มใจ"
     }
   }
-
-
-
-  
 }

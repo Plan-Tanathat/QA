@@ -5,8 +5,9 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
 MODEL_NAME = "llama3"
-model = OllamaLLM(model=MODEL_NAME)
-
+model = OllamaLLM(
+    model=MODEL_NAME
+)
 
 question_template = """
 จากประวัติการตอบคำถามของผู้ใช้ดังนี้:
@@ -38,28 +39,12 @@ conversation_log = {
     "answers": [],
     "ollama_generated_questions": [],
     "summary": "",
+    "all_answers": [],  # ✅ เก็บคำตอบทั้งหมดในที่เดียว
     "model_thoughts": {
         "question_generation": [],
         "summary_generation": {}
     }
 }
-
-MEMORY_FILE = "answer_memory.json" 
-
-def save_answer_to_memory(user_answer):
-    """เก็บคำตอบไว้ในไฟล์ memory"""
-    memory = []
-    if os.path.exists(MEMORY_FILE):
-        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
-            memory = json.load(f)
-    
-    memory.append({
-        "timestamp": datetime.now().isoformat(),
-        "answer": user_answer
-    })
-
-    with open(MEMORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(memory, f, ensure_ascii=False, indent=2)
 
 def handle_conversation(num_questions=5):
     context = ""
@@ -81,18 +66,21 @@ def handle_conversation(num_questions=5):
 
         print(f"Q{i+1}: {user_question}")
         user_input = input("You: ").strip()
-        
+
         if user_input.lower() == "exit":
             print("👋 จบการสนทนาแล้ว")
             break
 
-        # อัปเดต context และ log
+        # เพิ่มคำตอบลง context และ log
         context += f"\nผู้ใช้: {user_input}"
         conversation_log["questions"].append(user_question)
         conversation_log["answers"].append(user_input)
 
-        # 🧠 เก็บคำตอบไว้หลังบ้านด้วย
-        save_answer_to_memory(user_input)
+        # ✅ เพิ่มคำตอบพร้อม timestamp ไว้ใน all_answers
+        conversation_log["all_answers"].append({
+            "timestamp": datetime.now().isoformat(),
+            "answer": user_input
+        })
 
     print("\n🧠 กำลังวิเคราะห์บุคลิกและอารมณ์จากข้อมูลทั้งหมดที่มี...\n")
 
