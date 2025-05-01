@@ -162,5 +162,46 @@
     ],
     "summary": "จากการสนทนาผู้ใช้นาม หล่อ มีลักษณะนิสัยและอารมณ์อย่างต่อไปนี้:\n\n* นิสัย: เป็นผู้ใช้งานที่ลงรายละเอียดเล็กน้อย ไม่ค่อยใส่ใจในรายละเอียดมาก\n* อารมณ์: ดูเป็นคนสบายๆ ไม่เอาใส่มาก ไม่เกินง่าย\n* บุคลิกภาพ: ดูน่าจะเป็นคนตรงไปตรงมา ไม่ค่อยชอบใช้ความพยายามมากในการแก้ปัญหา\n\nรวมทั้งหมดอย่างรวดเร็วภายใน 5 บรรทัด",
     "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\nThis person appears to be **calm** and **practical**, as they approach problems by carefully analyzing them before taking action. They are also **laid-back** and **unfussy**, not getting worked up about small details or occasional setbacks. Their responses suggest a **patient** and **methodical** mindset, preferring to take things one step at a time rather than rushing in. They may have a tendency towards **skepticism**, questioning things before accepting them as true. Overall, this person seems to prioritize stability and efficiency over excitement and drama."
+  },
+  {
+    "conversation": [
+      {
+        "timestamp": "2025-05-01T22:02:33.569810",
+        "model_prompt": "คำถามเริ่มต้น",
+        "model_prompt_en": "Initial question without history",
+        "model_question": "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอะไร?",
+        "user_answer": "คนง่ายๆ"
+      },
+      {
+        "timestamp": "2025-05-01T22:04:26.714965",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new Thai question that is related to personality, feeling, or character of the user:\n\nคุณมีความเชื่อมั่นในการทำอะไรบ้าง?",
+        "user_answer": "ฉันว่าฉันมั่นใจในตัวเองเฉพาะเรื่องที่ฉันเชี่ยวชาญ"
+      },
+      {
+        "timestamp": "2025-05-01T22:05:45.078809",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณมีความสุขมากขึ้นเมื่อทำอะไร?\" (What makes you really happy?)\n\nThis question is designed to be concise and straightforward, while still allowing for some insight into the user's personality and values.",
+        "user_answer": "การได้ลองทำ Data กับทำลังลองทำงานนี้ที่ฉันคุยกับนายอยู่"
+      },
+      {
+        "timestamp": "2025-05-01T22:06:56.430741",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that's related to the user's personality, feelings, or character:\n\n\"คุณมีความเชื่อมั่นในตนเองมากหรือเปล่า?\"\n\n(Do you have a lot of self-confidence?)\n\nLet me know if you need any adjustments! 😊",
+        "user_answer": "ฉันคิดว่าฉันน่าจะไปปรับอารมณ์ แล้วต้องกลับมาสู้ใหม่ต่อให้ได้เร็วที่สุด"
+      },
+      {
+        "timestamp": "2025-05-01T22:07:50.454033",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\n\"คุณมักจะเลือกทำอะไรเมื่อได้รับความผิดหวัง?\"\n\n(Translation: \"What do you usually do when you're disappointed?\")",
+        "user_answer": "ฉันจะเลือกเดินออกมา"
+      }
+    ],
+    "summary": "จากการสนทนาผู้ใช้นี้ มีความคิดเห็นว่า:\n\nผู้ใช้เป็นคนตรงไปตรงมา ไม่ชอบทำสิ่งที่ไม่มั่นใจ ใช้ส攻ความเชี่ยวชาญเป็นแนวทางในการตัดสินใจ และมีเจตน์ที่จะปรับอารมณ์และกลับมาสู้ใหม่ต่อ\n\nผู้ใช้มีบุคลิกภาพที่แข็งแรง กล้าออกจากสถานการณ์ไม่สบายใจและพร้อมที่จะเริ่มต้นใหม่",
+    "summary_en": "Here is a summary of the user's personality traits, emotional tendencies, and behavioral patterns:\n\n**Personality Traits:** Down-to-earth, humble, and confident (specifically in areas they're knowledgeable about). **Emotional Tendencies:** Emotionally resilient, possibly prone to frustration or disappointment. **Behavioral Patterns:** Adaptable, willing to learn and grow from experiences."
   }
 ]
