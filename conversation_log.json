@@ -40,7 +40,6 @@
     "summary": "จากการสนทนาได้ทราบถึงลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้ว่า:\n\n* ผู้ใช้มีความเชื่อมั่นว่าตัวเองไม่เป็นคนที่ทำงานอย่างฉาดมากกว่า ซึ่งส่งสัญญาณว่ามีความอ่อนแอและไม่กล้าต่อการท้าทาย\n* ผู้ใช้มีสมาธิในการทำอะไรที่ตนเองถนัด เช่น ถ่ายรูป และเล่นเกม ซึ่งส่งสัญญาณว่ามีความสนใจและความเป็นเจ้าของอย่างแน่นอน\n* ผู้ใช้มีอารมณ์ที่เอาปล่อย ตลอดเวลาและมีความสนุกสนานในการทิ้งเวลาไปกับเรื่องราวเชิงบันเทิง\n\nสรุปได้ว่าผู้ใช้เป็นคนสบายๆ มีความอ่อนแอและไม่กล้าต่อการท้าทาย แต่มีความสนใจและความเป็นเจ้าของอย่างแน่นอนในการทำอะไรที่ตนเองถนัด",
     "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\n**Personality Traits:** Humble, self-effacing, creative.\n\n**Emotional Tendencies:** Down-to-earth, realistic, possibly self-doubting.\n\n**Behavioral Patterns:** Prefers to work hard, values effort over perfection, enjoys leisure activities (photography, gaming) and socializing with others.\n\nNote: The responses are in Thai, but I've tried to translate them into English to analyze the user's personality traits, emotional tendencies, and behavioral patterns."
   },
-  
   {
     "conversation": [
       {
@@ -81,5 +80,87 @@
     ],
     "summary": "จากการสนทนาผู้ใช้แสดงความชอบดูหนังแนวต่อสู้และดูหนังโดยรวม แต่ไม่ได้ระบุว่าทำไมก็ชอบดูหนังแนวต่อสู้มากกว่า จึงสรุปได้ว่าผู้ใช้มีบุคลิกภาพที่มีความสนใจในรายการความบันเทิงแบบมีแรงและพลังกาย เช่นเดียวกับอารมณ์ที่มีความสุขและเบิกบานจากการสัมผัสประสบการณ์เชิงบวก",
     "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\n**Personality Traits:** The user appears to be easy-going (personable), enjoys simple pleasures like entertainment, and values relaxation.\n\n**Emotional Tendencies:** They tend to prioritize happiness and joy, as evident from their preference for watching movies that bring them a good feeling. They are also open to exploring different genres and themes.\n\n**Behavioral Patterns:** The user is likely an introverted person who prefers spending time alone or engaging in solo activities like reading comics or playing games. They may not be very outgoing or adventurous, but they appreciate comfort and relaxation."
+  },
+  {
+    "conversation": [
+      {
+        "timestamp": "2025-05-01T12:56:27.176305",
+        "model_prompt": "คำถามเริ่มต้น",
+        "model_prompt_en": "Initial question without history",
+        "model_question": "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอะไร?",
+        "user_answer": "คนกินง่ายๆ"
+      },
+      {
+        "timestamp": "2025-05-01T12:56:37.961317",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนกินง่ายๆ\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนกินง่ายๆ\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's nature, feelings, or personality:\n\nคุณมักเลือกกินอาหารอะไรที่ทำให้คุณรู้สึกสงบและผ่อนคลาย?\n\nTranslation: What kind of food do you usually choose that makes you feel calm and relaxed?",
+        "user_answer": "น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น"
+      },
+      {
+        "timestamp": "2025-05-01T12:57:09.642481",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนกินง่ายๆ\nผู้ใช้: น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนกินง่ายๆ\nผู้ใช้: น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or characteristics:\n\nคุณชอบกินของหวานที่เย็นมากกว่ากินของหวานที่ร้อน?\n\n(This translates to \"Do you prefer eating cold sweets more than hot ones?\")",
+        "user_answer": "ใช่แช่แล้ว"
+      },
+      {
+        "timestamp": "2025-05-01T12:57:31.434577",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนกินง่ายๆ\nผู้ใช้: น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น\nผู้ใช้: ใช่แช่แล้ว\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนกินง่ายๆ\nผู้ใช้: น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น\nผู้ใช้: ใช่แช่แล้ว\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณชอบของหวานเย็นขนาดไหน?\"\n\n(How much do you like cold sweets?)\n\nThis question is relevant because the user has mentioned liking cold sweets and having them chilled before. It also shows curiosity about their preferences and how strongly they feel about it.",
+        "user_answer": "ก็ประมาณพวกไอติมกับบิงซูมั้ง"
+      },
+      {
+        "timestamp": "2025-05-01T12:58:03.658354",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\nผู้ใช้: คนกินง่ายๆ\nผู้ใช้: น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น\nผู้ใช้: ใช่แช่แล้ว\nผู้ใช้: ก็ประมาณพวกไอติมกับบิงซูมั้ง\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\nผู้ใช้: คนกินง่ายๆ\nผู้ใช้: น่าจะของหวานที่เย็นๆนะฉันชอบกินของหวานที่เย็น\nผู้ใช้: ใช่แช่แล้ว\nผู้ใช้: ก็ประมาณพวกไอติมกับบิงซูมั้ง\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that is relevant to the user's personality, feelings, or character:\n\nคุณชอบของหวานเย็นเพราะอะไร?\n\n(Why do you like cold desserts?)",
+        "user_answer": "ฉันอยู่ประเทศไทยแล้วมันร้อนอะ"
+      }
+    ],
+    "summary": "ผู้ใช้คนนี้มีลักษณะนิสัยและอารมณ์ที่ชอบความสบายและสะดวกสบาย โดยเฉพาะอย่างยิ่งในเรื่องของอาหารว่าชอบกินของหวานที่เย็น และต้องการหลีกเลี่ยงความร้อน อย่างไรก็ตามไม่แสดงออกทางอารมณ์มากนัก เนื้อหาและบุคลิกภาพของผู้ใช้คนนี้เป็นผู้ที่เน้นความสบายและการใช้ชีวิตอย่างผ่อนคลาย",
+    "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\n**Personality traits:** Casual, relaxed, and laid-back. The user seems to value simplicity and ease, preferring straightforward and uncomplicated things.\n\n**Emotional tendencies:** The user appears to be warm-hearted and enthusiastic, as they show excitement when talking about sweet treats (e.g., \"ฉันชอบกินของหวานที่เย็น\"). They also seem to have a carefree attitude towards life (\"มันร้อนอะ\" - \"it's hot\").\n\n**Behavioral patterns:** The user tends to be straightforward and direct in their communication, using simple language and avoiding complex expressions."
+  },
+  {
+    "conversation": [
+      {
+        "timestamp": "2025-05-01T13:38:09.732378",
+        "model_prompt": "คำถามเริ่มต้น",
+        "model_prompt_en": "Initial question without history",
+        "model_question": "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอะไร?",
+        "user_answer": "หล่อ"
+      },
+      {
+        "timestamp": "2025-05-01T13:39:14.133456",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new Thai question that relates to the user's personality, feelings, or character:\n\n\"คุณมีความเชื่อมั่นในตนเองสูงอยู่หรือไม่?\" (Do you have high self-confidence?)",
+        "user_answer": "เมื่อเล่นเกม"
+      },
+      {
+        "timestamp": "2025-05-01T13:39:56.931006",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai:\n\nคุณมีความเชื่อมั่นในตัวเองมากแค่ไหน?",
+        "user_answer": "ก็เป็นแค่บ้างครั้งนะ"
+      },
+      {
+        "timestamp": "2025-05-01T13:40:38.537024",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that relates to the user's personality, feelings, or character:\n\nคุณมีความเชื่อมั่นในตนเองอย่างไรเมื่อเผชิญกับความผิดหวัง?",
+        "user_answer": "ฉันจะค่อยๆมองปัญหาก่อนว่ามันคืออะไรแล้วก็ทำตามสิ่งที่เข้าใจ"
+      },
+      {
+        "timestamp": "2025-05-01T13:44:30.574241",
+        "model_prompt": "จากประวัติการตอบคำถามของผู้ใช้ดังนี้:\n\n\n\nกรุณาสร้าง \"คำถามใหม่ภาษาไทย\" จำนวน 1 ข้อ\nที่เกี่ยวข้องกับนิสัย ความรู้สึก หรือบุคลิกภาพของผู้ใช้\nคำถามต้องกระชับ ตรงประเด็น และไม่เกิน 1 ประโยค",
+        "model_prompt_en": "Based on the following user's responses:\n\n\n\nGenerate a single new **open-ended question** that explores the user's personality, emotional state, or beliefs. Keep it concise and natural.",
+        "model_question": "Here's a new question in Thai that is related to the user's personality, feelings, or character:\n\nคุณมีไลฟ์สไตล์ที่รัดกายมากหรือไม่?\n\n(Do you have a very disciplined lifestyle?)",
+        "user_answer": "ไม่ได้ละเอียดมากนะ"
+      }
+    ],
+    "summary": "จากการสนทนาผู้ใช้นาม หล่อ มีลักษณะนิสัยและอารมณ์อย่างต่อไปนี้:\n\n* นิสัย: เป็นผู้ใช้งานที่ลงรายละเอียดเล็กน้อย ไม่ค่อยใส่ใจในรายละเอียดมาก\n* อารมณ์: ดูเป็นคนสบายๆ ไม่เอาใส่มาก ไม่เกินง่าย\n* บุคลิกภาพ: ดูน่าจะเป็นคนตรงไปตรงมา ไม่ค่อยชอบใช้ความพยายามมากในการแก้ปัญหา\n\nรวมทั้งหมดอย่างรวดเร็วภายใน 5 บรรทัด",
+    "summary_en": "Based on the user responses, here is a summary of their personality traits, emotional tendencies, and behavioral patterns:\n\nThis person appears to be **calm** and **practical**, as they approach problems by carefully analyzing them before taking action. They are also **laid-back** and **unfussy**, not getting worked up about small details or occasional setbacks. Their responses suggest a **patient** and **methodical** mindset, preferring to take things one step at a time rather than rushing in. They may have a tendency towards **skepticism**, questioning things before accepting them as true. Overall, this person seems to prioritize stability and efficiency over excitement and drama."
   }
 ]
