@@ -33,17 +33,20 @@ prompts = load_prompts("system_prompt.txt")
 
 model = OllamaLLM(model=MODEL_NAME, system=prompts["system"])
 
-# ใช้ template
 question_prompt_th = ChatPromptTemplate.from_template(prompts["question_th"])
 summary_prompt_th = ChatPromptTemplate.from_template(prompts["summary_th"])
+next_question_prompt_th = ChatPromptTemplate.from_template(prompts["next_question_th"])
 question_prompt_en = ChatPromptTemplate.from_template(prompts["question_en"])
 summary_prompt_en = ChatPromptTemplate.from_template(prompts["summary_en"])
+next_question_prompt_en = ChatPromptTemplate.from_template(prompts["next_question_en"])
 
 # Chain
 question_chain_th = question_prompt_th | model
 summary_chain_th = summary_prompt_th | model
+next_question_chain_th = next_question_prompt_th | model
 question_chain_en = question_prompt_en | model
 summary_chain_en = summary_prompt_en | model
+next_question_chain_en = next_question_prompt_en | model
 
 conversation_log = {
     "conversation": [],
@@ -63,6 +66,8 @@ def handle_conversation(num_questions=5):
             model_question = "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอะไร?"
             model_prompt_th = "คำถามเริ่มต้น"
             model_prompt_en = "Initial question without history"
+        elif i >= 3:  # เริ่มใช้ next_question_th หลังคำถามที่ 3
+            model_question = next_question_chain_th.invoke({"context": context}).strip()
         else:
             model_prompt_th = prompts["question_th"].replace("{context}", context)
             model_prompt_en = prompts["question_en"].replace("{context}", context)
@@ -90,7 +95,7 @@ def handle_conversation(num_questions=5):
     summary_th = model.invoke(prompts["summary_th"].replace("{context}", context)).strip()
     summary_en = model.invoke(prompts["summary_en"].replace("{context}", context)).strip()
 
-    conversation_log["summary"] = summary_th
+    conversation_log["summary_th"] = summary_th
     conversation_log["summary_en"] = summary_en
 
     print("🧠 ผลวิเคราะห์ (ไทย):\n")
