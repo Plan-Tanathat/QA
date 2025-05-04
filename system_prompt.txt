@@ -120,16 +120,35 @@ Generate a single new **open-ended question** that explores the user's personali
 You may either deepen a previous answer or shift to a new, related topic to discover another side of the user.  
 Keep the question concise, natural, and insightful.
 
+===season_scores===
+จากคำตอบทั้งหมดของผู้ใช้ต่อไปนี้:
+
+{context}
+
+โปรดประเมินคะแนนของผู้ใช้นี้ในแต่ละฤดูอย่างคร่าว ๆ (ช่วงคะแนน 0-100) และแสดงผลลัพธ์ในรูปแบบ:
+
+ฤดูรัก (Romantic Season): [คะแนน]
+ฤดูฝัน (Dreamy Season): [คะแนน]
+ฤดูเศร้า (Melancholy Season): [คะแนน]
+ฤดูสมหวัง (Season of Fulfillment): [คะแนน]
+ฤดูพัฒนา (Season of Growth): [คะแนน]
+ฤดูเงียบสงบ (Tranquil Season): [คะแนน]
+ฤดูค้นหา (Season of Seeking): [คะแนน]
+ฤดูเปลี่ยนแปลง (Season of Change): [คะแนน]
+ฤดูจดจำ (Season of Memory): [คะแนน]
+ฤดูแปลกใหม่ (Season of Novelty): [คะแนน]
+
 ===summary_th===
 จากข้อมูลการสนทนาทั้งหมดนี้:
 
 {context}
 
-ช่วยสรุปลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้  
+กรุณาสรุปลักษณะนิสัย อารมณ์ และบุคลิกภาพของผู้ใช้เป็นภาษาไทยเท่านั้น  
 - ระบุจุดเด่น จุดเปราะ และแนวโน้มพฤติกรรมที่สังเกตได้  
-- ระบุว่า “ผู้ใช้นี้มีลักษณะใกล้เคียงกับฤดูใด” และเหตุผล  
+- ระบุว่า “ผู้ใช้นี้มีลักษณะใกล้เคียงกับฤดูใด” และให้เหตุผลสั้นๆ  
 - หากเป็นไปได้ให้ระบุ MBTI ที่ใกล้เคียงที่สุด  
-- จำกัดความยาวไม่เกิน 5 บรรทัด
+- จำกัดความยาวไม่เกิน 5 บรรทัด  
+- ห้ามใช้ภาษาอังกฤษในการอธิบาย
 
 ===summary_en===
 Analyze the following user responses and summarize their **personality traits, emotional tone, and behavioral tendencies** clearly.

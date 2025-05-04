@@ -1,9 +1,9 @@
 import json
 import os
+import re
 from datetime import datetime
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-import re
 
 MODEL_NAME = "llama3"
 
@@ -28,7 +28,10 @@ def load_prompts(filepath):
 
     return sections
 
+# โหลด prompt จาก system_prompt.txt
 prompts = load_prompts("system_prompt.txt")
+
+# สร้าง Model และ Prompt Chain
 model = OllamaLLM(model=MODEL_NAME, system=prompts["system"])
 
 question_prompt_th = ChatPromptTemplate.from_template(prompts["question_th"])
@@ -47,22 +50,15 @@ next_question_chain_en = next_question_prompt_en | model
 
 conversation_log = {
     "conversation": [],
-    "summary_th": "",
+    "summary": "",
     "summary_en": "",
-    "season_scores": {}
+    "season_scores": "",
+    "top_season": ""
 }
-
-def extract_season_scores(text):
-    pattern = r"(?:score|คะแนน)\s*:\s*(.*?)\s*(?:\n|$)"
-    match = re.search(pattern, text)
-    if match:
-        scores_text = match.group(1)
-        pairs = re.findall(r"([\wฤดู]+)\s*(\d{1,3})", scores_text)
-        return {name: int(score) for name, score in pairs if int(score) <= 100}
-    return {}
 
 def handle_conversation(num_questions=5):
     context = ""
+
     print("💬 เริ่มต้นการสนทนาใหม่! พิมพ์ 'exit' เพื่อหยุด\n")
 
     for i in range(num_questions):
@@ -81,7 +77,7 @@ def handle_conversation(num_questions=5):
             model_question_en = question_chain_en.invoke({"context": context}).strip()
             model_question = f"Q{i+1} (TH): {model_question_th}\nQ{i+1} (EN): {model_question_en}"
 
-        print(f"Q{i+1}: {model_question}")
+        print(f"\n{model_question}")
         user_answer = input("You: ").strip()
 
         if user_answer.lower() == "exit":
@@ -102,20 +98,38 @@ def handle_conversation(num_questions=5):
 
     summary_th = summary_chain_th.invoke({"context": context}).strip()
     summary_en = summary_chain_en.invoke({"context": context}).strip()
-    season_scores = extract_season_scores(summary_th)
 
-    conversation_log["summary_th"] = summary_th
+    # วิเคราะห์คะแนนฤดู
+    score_prompt = prompts["season_scores"].replace("{context}", context)
+    season_scores_text = model.invoke(score_prompt).strip()
+
+    # แปลงคะแนนเป็น dict
+    season_scores = {}
+    for line in season_scores_text.splitlines():
+        match = re.match(r"(ฤดู.+?):\s*([0-9]+)", line)
+        if match:
+            season = match.group(1).strip()
+            score = int(match.group(2))
+            season_scores[season] = score
+
+    # หาฤดูที่ได้คะแนนสูงสุด
+    top_season = max(season_scores.items(), key=lambda x: x[1])[0]
+    summary_th += f"\n\n🌤️ ฤดูที่สอดคล้องกับบุคลิกมากที่สุด: **{top_season}**"
+
+    # อัปเดต log
+    conversation_log["summary"] = summary_th
     conversation_log["summary_en"] = summary_en
     conversation_log["season_scores"] = season_scores
+    conversation_log["top_season"] = top_season
 
-    print("🧠 ผลวิเคราะห์ (ภาษาไทย):\n")
+    print("🧠 สรุปบุคลิกภาพ (ภาษาไทย):\n")
     print(summary_th)
-    print("\n🧠 Summary (English):\n")
+    print("\n🧠 Personality Summary (English):\n")
     print(summary_en)
-
-    print("\n📊 คะแนนฤดู:")
-    for season, score in season_scores.items():
-        print(f"- {season}: {score}")
+    print("\n🌸 คะแนนฤดู:\n")
+    for s, score in season_scores.items():
+        print(f"- {s}: {score}")
+    print(f"\n🎯 ฤดูเด่นที่สุด: {top_season}")
 
     save_conversation_to_json()
 
@@ -141,7 +155,8 @@ def save_conversation_to_json(filename="conversation_log.json"):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(all_logs, f, ensure_ascii=False, indent=2)
 
-    print(f"\n📁 เพิ่ม session ใหม่เรียบร้อย → บันทึกไว้ที่: {filename}")
+    print(f"\n📁 บันทึกลงไฟล์เรียบร้อย: {filename}")
+
 
 if __name__ == "__main__":
     handle_conversation()
