@@ -7,8 +7,8 @@ from main import prompts, model, conversation_log
 from main import question_chain_th, question_chain_en, summary_chain_th, summary_chain_en
 
 def extract_question_only(text):
-    match = re.search(r"(คุณ[^?.!]{2,100}[\?])", text)
-    return match.group(0) if match else text.strip()
+    matches = re.findall(r"(คุณ[^?.!]{2,100}[\?])", text)
+    return matches[0] if matches else text.strip()
 
 def extract_top_season(score_text):
     season_scores = {}
@@ -34,9 +34,7 @@ def run_interactive_conversation(num_questions=5):
         st.session_state.finished = False
         st.session_state.confirmed_end = False
 
-    # ถ้ายังไม่กดวิเคราะห์ แสดงคำถาม
     if not st.session_state.finished or not st.session_state.confirmed_end:
-
         if st.session_state.step == 0:
             model_question_th = "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอย่างไร?"
             model_question_en = "If you had to define yourself in one sentence, what would it be?"
@@ -47,7 +45,7 @@ def run_interactive_conversation(num_questions=5):
             full_th = question_chain_th.invoke({"context": context}).strip()
             full_en = question_chain_en.invoke({"context": context}).strip()
             model_question_th = extract_question_only(full_th)
-            model_question_en = full_en
+            model_question_en = extract_question_only(full_en)
             model_prompt_th = prompts["question_th"].replace("{context}", context)
             model_prompt_en = prompts["question_en"].replace("{context}", context)
 
@@ -84,7 +82,6 @@ def run_interactive_conversation(num_questions=5):
                 st.session_state.confirmed_end = True
                 st.rerun()
 
-    # ถ้ากดวิเคราะห์แล้ว แสดงผลลัพธ์
     if st.session_state.finished and st.session_state.confirmed_end:
         context = "\n".join([f"ผู้ใช้: {x}" for x in st.session_state.user_inputs])
         summary_th = summary_chain_th.invoke({"context": context}).strip()
@@ -121,7 +118,6 @@ def run_interactive_conversation(num_questions=5):
             st.markdown(f"**❓ {entry['model_question_th']}**")
             st.markdown(f"💬 _{entry['user_answer']}_")
 
-        # Save JSON
         filename = "conversation_log.json"
         all_logs = []
         if os.path.exists(filename):
@@ -141,5 +137,4 @@ def run_interactive_conversation(num_questions=5):
 
         st.success("📁 บันทึกอัตโนมัติแล้วที่: conversation_log.json")
 
-# เรียกใช้ฟังก์ชัน
 run_interactive_conversation()
