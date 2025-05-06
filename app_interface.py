@@ -7,8 +7,8 @@ from main import prompts, model, conversation_log
 from main import question_chain_th, question_chain_en, summary_chain_th, summary_chain_en
 
 def extract_question_only(text):
-    matches = re.findall(r"(คุณ[^?.!]{2,100}[\?])", text)
-    return matches[0] if matches else text.strip()
+    matches = re.findall(r"([^?.!]{5,200}\?)", text)
+    return matches[0].strip() if matches else text.strip()
 
 def extract_top_season(score_text):
     season_scores = {}
@@ -24,8 +24,8 @@ def extract_top_season(score_text):
 def run_interactive_conversation(num_questions=5):
     context = ""
 
-    st.title("💬 สนทนากับ AI นักวิเคราะห์บุคลิกภาพ")
-    st.markdown("ใส่คำตอบในช่องแล้วกด **Enter** หรือปุ่ม **ส่งคำตอบ** เพื่อคุยกับ AI")
+    st.title("💬 Chat with a Personality Analysis AI")
+    st.markdown("ตอบคำถามทีละข้อด้วยความจริงใจ เพื่อให้ AI วิเคราะห์ฤดูของคุณได้แม่นยำยิ่งขึ้น")
 
     if "step" not in st.session_state:
         st.session_state.step = 0
@@ -34,7 +34,7 @@ def run_interactive_conversation(num_questions=5):
         st.session_state.finished = False
         st.session_state.confirmed_end = False
 
-    if not st.session_state.finished or not st.session_state.confirmed_end:
+    if not st.session_state.confirmed_end:
         if st.session_state.step == 0:
             model_question_th = "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอย่างไร?"
             model_question_en = "If you had to define yourself in one sentence, what would it be?"
@@ -53,11 +53,10 @@ def run_interactive_conversation(num_questions=5):
         st.markdown(f"<p style='font-size: 20px;'>❓ <b>คำถาม (TH):</b> {model_question_th}</p>", unsafe_allow_html=True)
         st.markdown(f"<p style='font-size: 18px;'>🌐 <b>Question (EN):</b> {model_question_en}</p>", unsafe_allow_html=True)
 
-        with st.form(key=f"form_{st.session_state.step}"):
-            user_input = st.text_input(" ", key=f"input_{st.session_state.step}", label_visibility="collapsed")
-            submitted = st.form_submit_button("📤 ส่งคำตอบ")
+        # 💬 ใช้ chat_input แทน form
+        user_input = st.chat_input("พิมพ์คำตอบของคุณ แล้วกด Enter")
 
-        if submitted and user_input.strip() != "":
+        if user_input:
             timestamp = datetime.now().isoformat()
             st.session_state.history.append({
                 "timestamp": timestamp,
@@ -77,12 +76,11 @@ def run_interactive_conversation(num_questions=5):
             st.rerun()
 
         if st.session_state.finished:
-            st.subheader("✅ คุณตอบครบ 5 ข้อแล้ว")
             if st.button("🔍 พอแค่นี้ แล้ววิเคราะห์เลย"):
                 st.session_state.confirmed_end = True
                 st.rerun()
 
-    if st.session_state.finished and st.session_state.confirmed_end:
+    if st.session_state.confirmed_end:
         context = "\n".join([f"ผู้ใช้: {x}" for x in st.session_state.user_inputs])
         summary_th = summary_chain_th.invoke({"context": context}).strip()
         summary_en = summary_chain_en.invoke({"context": context}).strip()
@@ -99,8 +97,15 @@ def run_interactive_conversation(num_questions=5):
         conversation_log["season_scores"] = season_scores
         conversation_log["top_season"] = top_season
 
+        # 🎯 ผลวิเคราะห์
         st.subheader("🎯 ฤดูเด่นที่สุด (Top Season):")
         st.success(top_season)
+
+        image_path = f"img/{top_season}.png"
+        if os.path.exists(image_path):
+            st.image(image_path, caption=f"🌸 บุคลิกของคุณคือ {top_season}", use_column_width=True)
+        else:
+            st.warning(f"🔍 ไม่พบภาพสำหรับฤดู: {top_season}")
 
         st.subheader("🧠 สรุปบุคลิกภาพ (ภาษาไทย):")
         st.success(summary_th)
@@ -114,20 +119,18 @@ def run_interactive_conversation(num_questions=5):
 
         st.divider()
         st.subheader("🕘 ประวัติคำถาม-คำตอบย้อนหลัง")
-        for entry in st.session_state.history:
+        for entry in st.session_state.history[:-1]:  # ซ่อนคำถามสุดท้าย
             st.markdown(f"**❓ {entry['model_question_th']}**")
             st.markdown(f"💬 _{entry['user_answer']}_")
 
+        # 💾 Save
         filename = "conversation_log.json"
         all_logs = []
         if os.path.exists(filename):
             with open(filename, "r", encoding="utf-8") as f:
                 try:
                     existing_data = json.load(f)
-                    if isinstance(existing_data, dict):
-                        all_logs = [existing_data]
-                    elif isinstance(existing_data, list):
-                        all_logs = existing_data
+                    all_logs = [existing_data] if isinstance(existing_data, dict) else existing_data
                 except json.JSONDecodeError:
                     all_logs = []
 

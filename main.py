@@ -52,6 +52,11 @@ conversation_log = {
     "season_scores": {}
 }
 
+def extract_question_only(text):
+    matches = re.findall(r"([^?.!]{5,200}\?)", text)
+    return matches[0].strip() if matches else text.strip()
+
+
 def extract_season_scores(text):
     pattern = r"(?:score|คะแนน)\s*:\s*(.*?)\s*(?:\n|$)"
     match = re.search(pattern, text)
