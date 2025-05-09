@@ -21,11 +21,11 @@ def extract_top_season(score_text):
     top_season = max(season_scores.items(), key=lambda x: x[1])[0] if season_scores else ""
     return season_scores, top_season
 
-def run_interactive_conversation(num_questions=5):
+def run_interactive_conversation(num_questions=8):
     context = ""
 
     st.title("💬 Chat with a Personality Analysis AI")
-    st.markdown("ตอบคำถามทีละข้อด้วยความจริงใจ เพื่อให้ AI วิเคราะห์ฤดูของคุณได้แม่นยำยิ่งขึ้น")
+    st.markdown("Please answer each question honestly to help the AI figure out your true season more accurately!")
 
     if "step" not in st.session_state:
         st.session_state.step = 0
@@ -53,7 +53,6 @@ def run_interactive_conversation(num_questions=5):
         st.markdown(f"<p style='font-size: 20px;'>❓ <b>คำถาม (TH):</b> {model_question_th}</p>", unsafe_allow_html=True)
         st.markdown(f"<p style='font-size: 18px;'>🌐 <b>Question (EN):</b> {model_question_en}</p>", unsafe_allow_html=True)
 
-        # 💬 ใช้ chat_input แทน form
         user_input = st.chat_input("พิมพ์คำตอบของคุณ แล้วกด Enter")
 
         if user_input:
@@ -80,7 +79,7 @@ def run_interactive_conversation(num_questions=5):
                 st.session_state.confirmed_end = True
                 st.rerun()
 
-    if st.session_state.confirmed_end:
+    if st.session_state.finished and st.session_state.confirmed_end:
         context = "\n".join([f"ผู้ใช้: {x}" for x in st.session_state.user_inputs])
         summary_th = summary_chain_th.invoke({"context": context}).strip()
         summary_en = summary_chain_en.invoke({"context": context}).strip()
@@ -97,18 +96,14 @@ def run_interactive_conversation(num_questions=5):
         conversation_log["season_scores"] = season_scores
         conversation_log["top_season"] = top_season
 
-        # 🎯 ผลวิเคราะห์
         st.subheader("🎯 ฤดูเด่นที่สุด (Top Season):")
         st.success(top_season)
 
         image_path = f"img/{top_season}.png"
         if os.path.exists(image_path):
-            st.image(image_path, caption=f"🌸 บุคลิกของคุณคือ {top_season}", use_column_width=True)
+            st.image(image_path, caption=f"🌸 บุคลิกของคุณคือ {top_season}", use_container_width=True)
         else:
             st.warning(f"🔍 ไม่พบภาพสำหรับฤดู: {top_season}")
-
-        st.subheader("🧠 สรุปบุคลิกภาพ (ภาษาไทย):")
-        st.success(summary_th)
 
         st.subheader("🧠 Personality Summary (English):")
         st.info(summary_en)
@@ -119,11 +114,11 @@ def run_interactive_conversation(num_questions=5):
 
         st.divider()
         st.subheader("🕘 ประวัติคำถาม-คำตอบย้อนหลัง")
-        for entry in st.session_state.history[:-1]:  # ซ่อนคำถามสุดท้าย
+        for entry in st.session_state.history[:-1]:
             st.markdown(f"**❓ {entry['model_question_th']}**")
             st.markdown(f"💬 _{entry['user_answer']}_")
 
-        # 💾 Save
+        # Save
         filename = "conversation_log.json"
         all_logs = []
         if os.path.exists(filename):
