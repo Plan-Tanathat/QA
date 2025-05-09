@@ -66,7 +66,7 @@ def extract_season_scores(text):
         return {name: int(score) for name, score in pairs if int(score) <= 100}
     return {}
 
-def handle_conversation(num_questions=5):
+def handle_conversation(num_questions=10):
     context = ""
     print("💬 เริ่มต้นการสนทนาใหม่! พิมพ์ 'exit' เพื่อหยุด\n")
 
