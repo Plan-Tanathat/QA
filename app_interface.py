@@ -6,6 +6,9 @@ import streamlit as st
 from main import prompts, model, conversation_log
 from main import question_chain_th, question_chain_en, summary_chain_th, summary_chain_en
 
+with open("season_blessings.json", "r", encoding="utf-8") as f:
+    SEASON_BLESSINGS = json.load(f)
+
 def extract_question_only(text):
     matches = re.findall(r"([^?.!]{5,200}\?)", text)
     return matches[0].strip() if matches else text.strip()
@@ -108,8 +111,43 @@ def run_interactive_conversation(num_questions=8):
         else:
             st.warning(f"🔍 ไม่พบภาพสำหรับฤดู: {top_season}")
 
+        if top_season in SEASON_BLESSINGS:
+            st.markdown(f"""
+            <div style="
+                background-color: #1a1d29;
+                padding: 20px;
+                border-radius: 10px;
+                border-left: 6px solid #4ade80;
+                color: white;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-top: 1rem;
+            ">
+            <b>🌸 Blessing of the Season</b><br><br>
+            {SEASON_BLESSINGS[top_season]}
+            </div>
+            """, unsafe_allow_html=True)
+
         st.subheader("🧠 Personality Summary (English):")
         st.info(summary_en)
+
+        st.markdown("""
+        <div style="
+            background-color: #1a1d29;
+                padding: 20px;
+                border-radius: 10px;
+                border-left: 6px solid ##5ec7f7;
+                color: white;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-top: 1rem;
+        ">
+        <b>🚀 ช่วยกรุณาทำแบบประเมินให้หน่อยนะครับ 🍂🧠🌌</b><br><br>
+        👉 <a href="https://forms.gle/rcAerFKr7uimAGiY6" target="_blank"> Click Here 🌟✨</a>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.divider()
 
         st.subheader("🌸 คะแนนฤดู (Season Scores):")
         for season, score in season_scores.items():
