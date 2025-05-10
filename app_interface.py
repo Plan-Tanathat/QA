@@ -22,8 +22,6 @@ def extract_top_season(score_text):
     return season_scores, top_season
 
 def run_interactive_conversation(num_questions=8):
-    context = ""
-
     st.title("💬 Chat with a Personality Analysis AI")
     st.markdown("Please answer each question honestly to help the AI figure out your true season more accurately!")
 
@@ -33,49 +31,54 @@ def run_interactive_conversation(num_questions=8):
         st.session_state.user_inputs = []
         st.session_state.finished = False
         st.session_state.confirmed_end = False
+        st.session_state.awaiting_question = True
 
+    # Show Questions
     if not st.session_state.confirmed_end:
-        if st.session_state.step == 0:
-            model_question_th = "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอย่างไร?"
-            model_question_en = "If you had to define yourself in one sentence, what would it be?"
-            model_prompt_th = "คำถามเริ่มต้น"
-            model_prompt_en = "Initial question without history"
-        else:
-            context = "\n".join([f"ผู้ใช้: {x}" for x in st.session_state.user_inputs])
-            full_th = question_chain_th.invoke({"context": context}).strip()
-            full_en = question_chain_en.invoke({"context": context}).strip()
-            model_question_th = extract_question_only(full_th)
-            model_question_en = extract_question_only(full_en)
-            model_prompt_th = prompts["question_th"].replace("{context}", context)
-            model_prompt_en = prompts["question_en"].replace("{context}", context)
+        if st.session_state.awaiting_question:
+            if st.session_state.step == 0:
+                st.session_state.model_question_th = "ถ้าต้องนิยามตัวเองคุณจะนิยามตัวเองว่าอย่างไร?"
+                st.session_state.model_question_en = "If you had to define yourself in one sentence, what would it be?"
+                st.session_state.model_prompt_th = "คำถามเริ่มต้น"
+                st.session_state.model_prompt_en = "Initial question without history"
+            else:
+                context = "\n".join([f"ผู้ใช้: {x}" for x in st.session_state.user_inputs])
+                full_th = question_chain_th.invoke({"context": context}).strip()
+                full_en = question_chain_en.invoke({"context": context}).strip()
+                st.session_state.model_question_th = extract_question_only(full_th)
+                st.session_state.model_question_en = extract_question_only(full_en)
+                st.session_state.model_prompt_th = prompts["question_th"].replace("{context}", context)
+                st.session_state.model_prompt_en = prompts["question_en"].replace("{context}", context)
+
+            st.session_state.awaiting_question = False  # รอคำตอบก่อนจะสร้างรอบใหม่
 
         st.markdown(f"<h3>❓ คำถามที่ {st.session_state.step + 1}</h3>", unsafe_allow_html=True)
-        st.markdown(f"<p style='font-size: 20px;'>❓ <b>คำถาม (TH):</b> {model_question_th}</p>", unsafe_allow_html=True)
-        st.markdown(f"<p style='font-size: 18px;'>🌐 <b>Question (EN):</b> {model_question_en}</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 20px;'>❓ <b>คำถาม (TH):</b> {st.session_state.model_question_th}</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 18px;'>🌐 <b>Question (EN):</b> {st.session_state.model_question_en}</p>", unsafe_allow_html=True)
 
         user_input = st.chat_input("พิมพ์คำตอบของคุณ แล้วกด Enter")
-
         if user_input:
             timestamp = datetime.now().isoformat()
             st.session_state.history.append({
                 "timestamp": timestamp,
-                "model_prompt": model_prompt_th,
-                "model_prompt_en": model_prompt_en,
-                "model_question_th": model_question_th,
-                "model_question_en": model_question_en,
+                "model_prompt": st.session_state.model_prompt_th,
+                "model_prompt_en": st.session_state.model_prompt_en,
+                "model_question_th": st.session_state.model_question_th,
+                "model_question_en": st.session_state.model_question_en,
                 "user_answer": user_input.strip()
             })
 
             st.session_state.user_inputs.append(user_input.strip())
             st.session_state.step += 1
+            st.session_state.awaiting_question = True
 
             if st.session_state.step >= num_questions:
                 st.session_state.finished = True
-
             st.rerun()
+            st.stop()
 
-        if st.session_state.finished:
-            if st.button("🔍 พอแค่นี้ แล้ววิเคราะห์เลย"):
+        if st.session_state.finished and not st.session_state.confirmed_end:
+            if st.button("🔍 ส่งคำตอบทั้งหมดเพื่อวิเคราะห์"):
                 st.session_state.confirmed_end = True
                 st.rerun()
 
@@ -114,7 +117,7 @@ def run_interactive_conversation(num_questions=8):
 
         st.divider()
         st.subheader("🕘 ประวัติคำถาม-คำตอบย้อนหลัง")
-        for entry in st.session_state.history[:-1]:
+        for entry in st.session_state.history:
             st.markdown(f"**❓ {entry['model_question_th']}**")
             st.markdown(f"💬 _{entry['user_answer']}_")
 
