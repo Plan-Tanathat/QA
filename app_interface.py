@@ -3,7 +3,7 @@ import json
 import re
 from datetime import datetime
 import streamlit as st
-from main import prompts, model, conversation_log
+from main import prompts, model_th, conversation_log
 from main import question_chain_th, question_chain_en, summary_chain_th, summary_chain_en
 
 with open("season_blessings.json", "r", encoding="utf-8") as f:
@@ -91,7 +91,7 @@ def run_interactive_conversation(num_questions=8):
         summary_en = summary_chain_en.invoke({"context": context}).strip()
 
         score_prompt = prompts["season_scores"].replace("{context}", context)
-        season_scores_text = model.invoke(score_prompt).strip()
+        season_scores_text = model_th.invoke(score_prompt).strip()
         season_scores, top_season = extract_top_season(season_scores_text)
 
         summary_th += f"\n\n🌤️ ฤดูที่สอดคล้องกับบุคลิกภาพมากที่สุด: **{top_season}**"
