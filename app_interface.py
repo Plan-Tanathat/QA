@@ -174,6 +174,6 @@ def run_interactive_conversation(num_questions=8):
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(all_logs, f, ensure_ascii=False, indent=2)
 
-        st.success("📁 บันทึกอัตโนมัติแล้วที่: conversation_log.json")
+        st.success("🙏 ขอบคุณที่เข้ามาเล่นนะครับ 💫")
 
 run_interactive_conversation()
